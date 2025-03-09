@@ -3,6 +3,53 @@
 ## 🎯 Què aprendrem?
 En aquesta secció aprendrem les operacions bàsiques per crear, llegir, actualitzar i eliminar documents (CRUD) utilitzant MongoDB Atlas.
 
+## 🌱 Dades Inicials
+Primer carregarem unes dades d'exemple per practicar:
+
+```javascript
+// Crear la col·lecció i inserir dades inicials
+db.productes.insertMany([
+  {
+    "nom": "MongoDB Shirt",
+    "preu": 15.99,
+    "stock": 100,
+    "categoria": "roba"
+  },
+  {
+    "nom": "Database Stickers",
+    "preu": 3.99,
+    "stock": 200,
+    "categoria": "accessoris"
+  },
+  {
+    "nom": "NoSQL Book",
+    "preu": 29.99,
+    "stock": 50,
+    "categoria": "llibres"
+  }
+]);
+
+db.alumnes.insertMany([
+  {
+    "nom": "Pere Costa",
+    "edat": 19,
+    "moduls": ["M06", "M07"]
+  },
+  {
+    "nom": "Anna Puig",
+    "edat": 20,
+    "moduls": ["M06", "M08"]
+  },
+  {
+    "nom": "Joan Riu",
+    "edat": 18,
+    "moduls": ["M07", "M09"]
+  }
+]);
+```
+
+Aquestes dades ens serviran per practicar totes les operacions CRUD.
+
 ## 📚 Teoria
 Les operacions CRUD són la base de qualsevol base de dades:
 - 📥 Create (insertOne/insertMany)

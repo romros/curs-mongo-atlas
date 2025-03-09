@@ -3,7 +3,95 @@
 ## 🎯 Què aprendrem?
 En aquesta secció aprendrem a realitzar consultes i agregacions bàsiques però potents utilitzant el pla gratuït de MongoDB Atlas (M0).
 
+## 🌱 Dades Inicials
+Per practicar les consultes avançades, necessitem un conjunt de dades més complet:
+
+```javascript
+// Afegim més productes amb més detalls
+db.productes.insertMany([
+  {
+    "nom": "MongoDB Shirt",
+    "preu": 15.99,
+    "stock": 100,
+    "categoria": "roba",
+    "colors": ["negre", "blau"],
+    "valoracions": [4, 5, 5, 4],
+    "dataCreacio": new Date("2024-01-15")
+  },
+  {
+    "nom": "Database Stickers Pack",
+    "preu": 3.99,
+    "stock": 200,
+    "categoria": "accessoris",
+    "tipus": ["MongoDB", "SQL", "Redis"],
+    "valoracions": [5, 4, 4, 5, 3],
+    "dataCreacio": new Date("2024-02-01")
+  },
+  {
+    "nom": "NoSQL Book",
+    "preu": 29.99,
+    "stock": 50,
+    "categoria": "llibres",
+    "autor": "Maria Garcia",
+    "pagines": 250,
+    "valoracions": [5, 5, 4, 5],
+    "dataCreacio": new Date("2024-01-10")
+  },
+  {
+    "nom": "Developer Hoodie",
+    "preu": 39.99,
+    "stock": 75,
+    "categoria": "roba",
+    "colors": ["gris", "negre", "blau"],
+    "valoracions": [4, 4, 3, 5],
+    "dataCreacio": new Date("2024-02-15")
+  }
+]);
+
+// Afegim vendes per agregacions
+db.vendes.insertMany([
+  {
+    "data": new Date("2024-03-01"),
+    "producte_id": ObjectId("..."),  // ID del MongoDB Shirt
+    "quantitat": 2,
+    "preu_unitari": 15.99,
+    "client": {
+      "nom": "Joan Pere",
+      "ciutat": "Barcelona"
+    }
+  },
+  {
+    "data": new Date("2024-03-01"),
+    "producte_id": ObjectId("..."),  // ID dels Stickers
+    "quantitat": 5,
+    "preu_unitari": 3.99,
+    "client": {
+      "nom": "Anna Vila",
+      "ciutat": "Girona"
+    }
+  },
+  {
+    "data": new Date("2024-03-02"),
+    "producte_id": ObjectId("..."),  // ID del Book
+    "quantitat": 1,
+    "preu_unitari": 29.99,
+    "client": {
+      "nom": "Pere Mas",
+      "ciutat": "Barcelona"
+    }
+  }
+]);
+```
+
+Aquestes dades ens permetran practicar:
+- 🔍 Cerques complexes
+- 📊 Agregacions
+- 🔢 Operacions amb arrays
+- 📅 Consultes per dates
+
 ## 📚 Teoria
+Les consultes avançades ens permeten...
+
 Amb Atlas M0 podem fer:
 - 🎯 Filtres combinats
 - 🔄 Agregacions simples

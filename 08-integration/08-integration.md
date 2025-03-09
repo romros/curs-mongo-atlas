@@ -3,6 +3,44 @@
 ## 🎯 Què aprendrem?
 En aquesta secció aprendrem a connectar i utilitzar MongoDB Atlas directament des del navegador utilitzant JavaScript vanilla, sense necessitat de llibreries externes.
 
+## 🌱 Dades per Practicar
+Utilitzarem dues fonts de dades:
+
+1. **Col·leccions d'exemple d'Atlas**:
+- `sample_training.zips`: Per cerques de localitats
+- `sample_training.grades`: Per gestió de notes
+
+2. **Nova col·lecció per la nostra app**:
+```javascript
+// Crear col·lecció de tasques
+use app_test
+db.tasques.insertMany([
+  {
+    "titol": "Aprendre MongoDB",
+    "descripcio": "Completar el curs bàsic",
+    "estat": "pendent",
+    "prioritat": 1,
+    "dataCreacio": new Date()
+  },
+  {
+    "titol": "Practicar JavaScript",
+    "descripcio": "Fer exercicis DOM",
+    "estat": "en_progres",
+    "prioritat": 2,
+    "dataCreacio": new Date()
+  },
+  {
+    "titol": "Projecte Final",
+    "descripcio": "Crear app amb MongoDB i JS",
+    "estat": "pendent",
+    "prioritat": 3,
+    "dataCreacio": new Date()
+  }
+]);
+```
+
+> 💡 **Nota**: Aquestes dades són ideals per practicar CRUD des del frontend i són prou simples per M0.
+
 ## 📚 Teoria
 La integració amb Atlas M0 des del navegador:
 - 🔌 API REST amb fetch
