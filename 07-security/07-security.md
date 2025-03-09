@@ -177,7 +177,7 @@ db.createUser({
   user: "editor",
   pwd: "edicio123",
   roles: [
-    { role: "readWrite", db: "biblioteca" }
+    { role: "readWrite", db: "escola" }
   ]
 })
 ```

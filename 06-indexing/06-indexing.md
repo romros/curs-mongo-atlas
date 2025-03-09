@@ -215,3 +215,12 @@ Optimitza una botiga online simple:
 
 ## ⏭️ Següent tema
 Al següent tema veurem com implementar seguretat bàsica i control d'accés en Atlas M0. 
+
+// En exemples d'índexs
+db.usuaris.find({ "_id": "USR001" })  // ID més simple
+
+// En explicacions
+// Altres opcions disponibles en plans de pagament:
+// - Índexs compostos
+// - Índexs de text
+// - Índexs geoespacials 

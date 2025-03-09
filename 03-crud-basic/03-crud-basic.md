@@ -79,7 +79,8 @@ Les operacions CRUD són la base de qualsevol base de dades:
 db.usuaris.insertOne({
   "nom": "Maria Garcia",
   "email": "maria@example.com",
-  "ultimAcces": new Date()  // Dades mínimes necessàries
+  "edat": 25,
+  "ciutat": "Barcelona"
 })
 
 // READ: Buscar usuaris (amb límit)
@@ -151,7 +152,7 @@ db.alumnes.find({ "edat": { $gte: 20 } })
 ```javascript
 // Afegir un mòdul a un alumne
 db.alumnes.updateOne(
-  { "nom": "Pere Costa" },
+  { "_id": "ALU001" },
   { $push: { "moduls": "M09" } }
 )
 ```

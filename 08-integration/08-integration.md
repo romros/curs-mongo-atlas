@@ -90,7 +90,8 @@ async function connectAtlas(collection, action, data = null) {
     const response = await fetch(`${ATLAS_API}/action/${action}`, config);
     return await response.json();
   } catch (error) {
-    console.error("Error:", error);
+    console.error("Error en la connexió:", error);
+    mostrarMissatgeError("No s'ha pogut connectar amb la base de dades");
     throw error;
   }
 }

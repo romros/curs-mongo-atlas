@@ -52,7 +52,7 @@ db.productes.insertMany([
 db.vendes.insertMany([
   {
     "data": new Date("2024-03-01"),
-    "producte_id": ObjectId("..."),  // ID del MongoDB Shirt
+    "producte_id": "SHIRT001",  // ID de la samarreta MongoDB
     "quantitat": 2,
     "preu_unitari": 15.99,
     "client": {
@@ -62,7 +62,7 @@ db.vendes.insertMany([
   },
   {
     "data": new Date("2024-03-01"),
-    "producte_id": ObjectId("..."),  // ID dels Stickers
+    "producte_id": "STICKER001",  // ID dels adhesius
     "quantitat": 5,
     "preu_unitari": 3.99,
     "client": {
@@ -72,7 +72,7 @@ db.vendes.insertMany([
   },
   {
     "data": new Date("2024-03-02"),
-    "producte_id": ObjectId("..."),  // ID del Book
+    "producte_id": ObjectId("507f1f77bcf86cd799439013"),  // ID del Book
     "quantitat": 1,
     "preu_unitari": 29.99,
     "client": {
@@ -155,6 +155,27 @@ db.usuaris.find({
   "ciutat": "Barcelona",
   "edat": { $gte: 18 }
 }).limit(20)
+```
+
+#### 3. **Auditoria Avançada** 📋
+```javascript
+// En versions de pagament podries veure:
+{
+  "usuari": "maria",
+  "acció": "update",
+  "col·lecció": "vendes",
+  "data": ISODate("2024-03-15T10:30:00Z"),
+  "canvis": { 
+    "abans": {
+      "preu": 19.99,
+      "stock": 10
+    },
+    "despres": {
+      "preu": 24.99,
+      "stock": 5
+    }
+  }
+}
 ```
 
 ## ⚡ Exercici Pràctic
